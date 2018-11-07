@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "UUID": "e51e1303-6729-4b95-b710-df967e6a15d5",
+  "Name": "entre",
+  "Properties": {
+    "description": "Social network for Entreprenuers ",
+    "language": "en"
+  },
+  "PropertiesSchemaFile": "properties_schema.json",
+  "DHTConfig": {
+    "HashType": "sha2-256"
+  },
+  "Zomes": [
+    {
+      "Name": "members",
+      "Description": "track member info and rep",
+      "RibosomeType": "js",
+      "CodeFile": "members.js",
+      "Entries": [
+        {
+          "Name": "Profile",
+          "Required": true,
+          "DataFormat": "json",
+          "Sharing": "public",
+          "SchemaFile": "Profile.json"
+        },
+        {
+          "Name": "memberPosts",
+          "Required": true,
+          "DataFormat": "links",
+          "Sharing": "public"
+        },
+        {
+          "Name": "memberLikes",
+          "Required": true,
+          "DataFormat": "links",
+          "Sharing": "public"
+        },
+        {
+          "Name": "memberFlags",
+          "Required": true,
+          "DataFormat": "links",
+          "Sharing": "public"
+        }
+      ],
+      "Functions": [
+        {
+          "Name": "ProfileCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ProfileRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ProfileUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "ProfileDelete",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "listPosts",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "listLikes",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "listFlags",
+          "CallingType": "json",
+          "Exposure": "public"
+        }
+      ]
+    },
+    {
+      "Name": "posts",
+      "Description": "see posts",
+      "RibosomeType": "js",
+      "CodeFile": "posts.js",
+      "Entries": [
+        {
+          "Name": "post",
+          "Required": true,
+          "DataFormat": "json",
+          "Sharing": "public",
+          "SchemaFile": "post.json"
+        }
+      ],
+      "Functions": [
+        {
+          "Name": "postCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "postRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "postUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "postDelete",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "listTagged",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "listFlagged",
+          "CallingType": "json",
+          "Exposure": "public"
+        }
+      ]
+    },
+    {
+      "Name": "anchors",
+      "Description": "anchors mixin",
+      "RibosomeType": "js",
+      "CodeFile": "anchors.js",
+      "Config": {
+        "ErrorHandling": "throwErrors"
+      },
+      "Entries": [
+        {
+          "Name": "anchor",
+          "DataFormat": "json",
+          "SchemaFile": "anchor.json",
+          "Sharing": "public"
+        },
+        {
+          "Name": "anchor_link",
+          "DataFormat": "links"
+        }
+      ],
+      "Functions": [
+        {
+          "Name": "anchor",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "exists",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "anchors",
+          "CallingType": "string",
+          "Exposure": "public"
+        }
+      ]
+    }
+  ]
+}

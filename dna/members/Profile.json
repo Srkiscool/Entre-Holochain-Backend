@@ -1,0 +1,66 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "username",
+    "firstName",
+    "lastName",
+    "phone",
+    "bio"
+  ],
+  "properties": {
+    "username": {
+      "$id": "#/properties/username",
+      "type": "string",
+      "title": "The Username Schema",
+      "default": "",
+      "examples": [
+        "kitty"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "firstName": {
+      "$id": "#/properties/firstName",
+      "type": "string",
+      "title": "The Firstname Schema",
+      "default": "",
+      "examples": [
+        "Cathy"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "lastName": {
+      "$id": "#/properties/lastName",
+      "type": "string",
+      "title": "The Lastname Schema",
+      "default": "",
+      "examples": [
+        "Jerry"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "phone": {
+      "$id": "#/properties/phone",
+      "type": "string",
+      "title": "The Phone Schema",
+      "default": "",
+      "examples": [
+        "911"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "bio": {
+      "$id": "#/properties/bio",
+      "type": "string",
+      "title": "The Bio Schema",
+      "default": "",
+      "examples": [
+        "likes cat food and mice."
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
