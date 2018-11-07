@@ -1,0 +1,85 @@
+{
+  "Tests": [
+    {
+      "Convey": "auto-generated test for ProfileCreate",
+      "Zome": "members",
+      "FnName": "ProfileCreate",
+      "Input": {
+        "username": "kitty",
+        "firstName": "Cathy",
+        "lastName": "Jerry",
+        "phone": "911",
+        "bio": "likes cat food and mice."
+      },
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for ProfileRead",
+      "Zome": "members",
+      "FnName": "ProfileRead",
+      "Input": "%h%",
+      "Output": {
+        "username": "kitty",
+        "firstName": "Cathy",
+        "lastName": "Jerry",
+        "phone": "911",
+        "bio": "likes cat food and mice."
+      }
+    },
+    {
+      "Convey": "auto-generated test for ProfileUpdate",
+      "Zome": "members",
+      "FnName": "ProfileUpdate",
+      "Input": {
+        "hash": "%h%",
+        "username": "foo",
+        "firstName": "Cathy",
+        "lastName": "Jerry",
+        "phone": "123",
+        "bio": "likes cat food and mice."
+      },
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for ProfileRead",
+      "Zome": "members",
+      "FnName": "ProfileRead",
+      "Input": "%h%",
+      "Output": {
+        "username": "foo",
+        "firstName": "Cathy",
+        "lastName": "Jerry",
+        "phone": "123",
+        "bio": "likes cat food and mice."
+      }
+    },
+    {
+      "Convey": "auto-generated test for ProfileDelete",
+      "Zome": "members",
+      "FnName": "ProfileDelete",
+      "Input": "%h%",
+      "Output": "%h%"
+    },
+    {
+      "Convey": "auto-generated test for listPosts",
+      "Zome": "members",
+      "FnName": "listPosts",
+      "Input": "",
+      "Output": {}
+    },
+    {
+      "Convey": "auto-generated test for listLikes",
+      "Zome": "members",
+      "FnName": "listLikes",
+      "Input": "",
+      "Output": {}
+    },
+    {
+      "Convey": "auto-generated test for listFlags",
+      "Zome": "members",
+      "FnName": "listFlags",
+      "Input": "",
+      "Output": {}
+    }
+  ]
+}
